@@ -1,4 +1,4 @@
-# 🤖 Muhammad Muneeb Ramzan — 3D AI Developer Portfolio
+# Muhammad Muneeb Ramzan — 3D AI Developer Portfolio
 
 An immersive, modern, professional 3D personal portfolio website for **Muhammad Muneeb Ramzan**, AI Software Developer Trainee & AI Student at **Adan Institute of Technology, Islamabad**.
 
@@ -6,21 +6,21 @@ Built with **React 18**, **Three.js**, **React Three Fiber (R3F)**, **Drei**, **
 
 ---
 
-## ✨ Features & Architecture
+## Features & Architecture
 
-- 🧠 **Interactive 3D Neural AI Core & Particles Hero**:
+- **Interactive 3D Neural AI Core & Particles Hero**:
   - Real-time 3D glowing AI Neural Brain with 18 pulsating synaptic nodes and distorted holographic plasma core.
   - Multi-axis rotating cybernetic orbital energy rings.
   - Interactive mouse-reactive particle grid wave and twinkling cosmic space dust.
   - Smooth orbit controls with touch & pointer damping.
 
-- 🪐 **Interactive 3D Fibonacci Skills Sphere & Categories**:
+- **Interactive 3D Fibonacci Skills Sphere & Categories**:
   - Fibonacci-distributed 3D orbital constellation featuring all 15 skills:
     *Python, Generative AI, RAG, LangChain, LangGraph, AI Agents, Chatbot Development, Machine Learning, Artificial Intelligence, Pandas, NumPy, HTML, CSS, Digital Marketing, SEO*.
   - Hover over rotating 3D skill nodes to inspect domain details with Web Audio synthesizer feedback.
   - Synchronized domain category filter tabs and proficiency progress bars.
 
-- 🎴 **3D Parallax Tilt AI Project Cards**:
+- **3D Parallax Tilt AI Project Cards**:
   - Real-time mouse perspective calculation for 3D card parallax tilt.
   - Covers 5 flagship AI creations:
     1. **AI Recruiter** (Resume analysis & candidate screening)
@@ -31,26 +31,26 @@ Built with **React 18**, **Three.js**, **React Three Fiber (R3F)**, **Drei**, **
   - Direct GitHub repository and Live Demo buttons on every card.
   - Deep-dive architecture modal previews with end-to-end system pipelines and performance metrics.
 
-- 🤖 **Interactive 'Ask Muneeb AI Assistant' Widget**:
+- **Interactive 'Ask Muneeb AI Assistant' Widget**:
   - Expandable neural chatbot agent allowing visitors to query Muneeb's skills, projects, and Adan Institute background.
   - Quick-prompt suggestion chips for instantaneous answers.
 
-- ⏳ **Futuristic Experience & Learning Timeline**:
+- **Futuristic Experience & Learning Timeline**:
   - 2026 AI Software Developer Trainee (Adan Institute of Technology).
   - 2026 Artificial Intelligence Studies (ML, GenAI, RAG, LangChain, AI Agents, Python).
   - Digital Marketing & SEO certification.
   - Education (Intermediate Education) & Current Focus cards.
 
-- 📡 **'Let's Build Something Intelligent' Contact Portal**:
+- **'Let's Build Something Intelligent' Contact Portal**:
   - Interactive contact form with cosmic confetti blast celebration and instant feedback.
   - One-click primary email copy to clipboard.
 
-- 🔊 **Web Audio API Sound FX**:
+- **Web Audio API Sound FX**:
   - Procedural sound effects for hover, clicks, and chimes with a sound toggle.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: React 18, Vite
 - **3D Graphics & Shaders**: Three.js, `@react-three/fiber`, `@react-three/drei`
@@ -59,7 +59,7 @@ Built with **React 18**, **Three.js**, **React Three Fiber (R3F)**, **Drei**, **
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 ```bash
