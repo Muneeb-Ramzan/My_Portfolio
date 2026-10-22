@@ -88,9 +88,7 @@ export default function Footer() {
 
         {/* Bottom copyright line */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
-          <div>
-            © {new Date().getFullYear()} Muhammad Muneeb Ramzan • Adan Institute of Technology, Islamabad.
-          </div>
+          
           <div className="flex items-center gap-4">
             <a
               href={personal.socials.github}

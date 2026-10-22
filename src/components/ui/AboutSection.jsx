@@ -65,7 +65,7 @@ export default function AboutSection() {
                 My current focus includes <strong className="text-white">Python, Machine Learning, Generative AI, RAG systems, LangChain, AI agents, chatbots, and automation</strong>. I also have experience and knowledge in <strong className="text-white">Digital Marketing, SEO, HTML, and CSS</strong>.
               </p>
               <p className="p-4 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-200 font-mono text-xs sm:text-sm">
-                💡 "I believe in learning by building projects and continuously improving my technical skills."
+                "I believe in learning by building projects and continuously improving my technical skills."
               </p>
             </div>
 

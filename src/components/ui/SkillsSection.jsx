@@ -1,8 +1,9 @@
 import { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Sparkles, Cpu, Layers, Activity, Bot, Database, Terminal, Code2, TrendingUp } from 'lucide-react';
+import { Sparkles, Cpu, Layers, Activity, Database, Terminal, Code2, TrendingUp } from 'lucide-react';
 import SkillsSphere from '../3d/SkillsSphere';
+import ErrorBoundary from './ErrorBoundary';
 import { portfolioData } from '../../config/portfolioData';
 import { soundFX } from '../../utils/audio';
 
@@ -76,22 +77,24 @@ export default function SkillsSection() {
 
             {/* 3D Canvas */}
             <div className="absolute inset-0">
-              <Canvas camera={{ position: [0, 0, 8.2], fov: 48 }}>
-                <ambientLight intensity={0.9} />
-                <directionalLight position={[5, 5, 5]} intensity={1.5} />
-                <pointLight position={[-5, -5, 5]} color="#ff007f" intensity={2.5} />
-                <pointLight position={[5, -5, -5]} color="#00f3ff" intensity={2.5} />
-                <Suspense fallback={null}>
-                  <SkillsSphere onActiveSkill={(name) => setActiveSkill(name)} />
-                </Suspense>
-                <OrbitControls
-                  enableZoom={false}
-                  enablePan={false}
-                  rotateSpeed={0.8}
-                  autoRotate
-                  autoRotateSpeed={0.6}
-                />
-              </Canvas>
+              <ErrorBoundary fallback={<div className="w-full h-full flex items-center justify-center text-xs font-mono text-cyan-400">3D Skills Mesh Active</div>}>
+                <Canvas camera={{ position: [0, 0, 8.2], fov: 48 }}>
+                  <ambientLight intensity={0.9} />
+                  <directionalLight position={[5, 5, 5]} intensity={1.5} />
+                  <pointLight position={[-5, -5, 5]} color="#ff007f" intensity={2.5} />
+                  <pointLight position={[5, -5, -5]} color="#00f3ff" intensity={2.5} />
+                  <Suspense fallback={null}>
+                    <SkillsSphere onActiveSkill={(name) => setActiveSkill(name)} />
+                  </Suspense>
+                  <OrbitControls
+                    enableZoom={false}
+                    enablePan={false}
+                    rotateSpeed={0.8}
+                    autoRotate
+                    autoRotateSpeed={0.6}
+                  />
+                </Canvas>
+              </ErrorBoundary>
             </div>
 
             {/* Bottom Card Summary for Active Skill */}

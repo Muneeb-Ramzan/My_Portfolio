@@ -123,19 +123,7 @@ function ProjectCard({ project, onOpenModal }) {
             <span>GitHub</span>
           </a>
 
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => {
-              e.stopPropagation();
-              soundFX.playClick();
-            }}
-            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-bold bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 transition-all shadow-md group/btn"
-          >
-            <span>Live Demo</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+        
         </div>
 
         <button

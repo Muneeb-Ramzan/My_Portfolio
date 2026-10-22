@@ -8,6 +8,8 @@ import ExperienceSection from './components/ui/ExperienceSection';
 import ContactSection from './components/ui/ContactSection';
 import Footer from './components/ui/Footer';
 
+import ErrorBoundary from './components/ui/ErrorBoundary';
+
 export default function App() {
   return (
     <div className="relative min-h-screen bg-cyber-darker text-slate-100 overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
@@ -18,7 +20,9 @@ export default function App() {
         {/* 3D Hero Section */}
         <section id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
           {/* Background 3D Three.js Canvas */}
-          <HeroScene />
+          <ErrorBoundary fallback={<div className="absolute inset-0 cyber-grid opacity-30" />}>
+            <HeroScene />
+          </ErrorBoundary>
 
           {/* Foreground UI Layer */}
           <HeroOverlay />
