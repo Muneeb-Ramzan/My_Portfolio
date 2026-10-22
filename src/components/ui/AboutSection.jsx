@@ -1,4 +1,4 @@
-import { Sparkles, Terminal, Bot, Database, Cpu, TrendingUp, Code2, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Sparkles, Terminal, Workflow, Database, Cpu, TrendingUp, Code2, CheckCircle2, ArrowRight } from 'lucide-react';
 import { portfolioData } from '../../config/portfolioData';
 import { soundFX } from '../../utils/audio';
 
@@ -14,7 +14,7 @@ export default function AboutSection() {
       border: "hover:border-cyan-400/50"
     },
     {
-      icon: Bot,
+      icon: Workflow,
       title: "AI Agents & LangChain",
       desc: "Building autonomous agentic workflows, multi-agent collaboration with LangGraph, tool invocation, and contextual conversation memory.",
       accent: "text-purple-400",

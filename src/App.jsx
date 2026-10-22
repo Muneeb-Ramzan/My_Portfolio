@@ -7,7 +7,6 @@ import ProjectsSection from './components/ui/ProjectsSection';
 import ExperienceSection from './components/ui/ExperienceSection';
 import ContactSection from './components/ui/ContactSection';
 import Footer from './components/ui/Footer';
-import AIAssistantWidget from './components/ui/AIAssistantWidget';
 
 export default function App() {
   return (
@@ -43,9 +42,6 @@ export default function App() {
         {/* Interactive Hologram Contact Portal */}
         <ContactSection />
       </main>
-
-      {/* Floating Interactive AI Assistant */}
-      <AIAssistantWidget />
 
       {/* Footer */}
       <Footer />

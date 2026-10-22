@@ -1,4 +1,4 @@
-import { ArrowUp, Terminal, Bot, Sparkles } from 'lucide-react';
+import { ArrowUp, Terminal, Sparkles } from 'lucide-react';
 import { portfolioData } from '../../config/portfolioData';
 import { soundFX } from '../../utils/audio';
 
@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-0.5">
                 <div className="w-full h-full bg-slate-950 rounded-[6px] flex items-center justify-center">
-                  <Bot className="w-4 h-4 text-cyan-400" />
+                  <Terminal className="w-4 h-4 text-cyan-400" />
                 </div>
               </div>
               <span className="font-display font-bold text-lg text-white">

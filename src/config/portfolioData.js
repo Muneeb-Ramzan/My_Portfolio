@@ -25,11 +25,11 @@ export const portfolioData = {
   ],
 
   currentFocus: [
-    { name: "Artificial Intelligence", desc: "Core algorithms, neural architectures & reasoning", icon: "Bot", color: "from-cyan-500 to-blue-600" },
-    { name: "Machine Learning", desc: "Supervised/unsupervised models & predictive pipelines", icon: "Cpu", color: "from-purple-500 to-indigo-600" },
+    { name: "Artificial Intelligence", desc: "Core algorithms, neural architectures & reasoning", icon: "Cpu", color: "from-cyan-500 to-blue-600" },
+    { name: "Machine Learning", desc: "Supervised/unsupervised models & predictive pipelines", icon: "Activity", color: "from-purple-500 to-indigo-600" },
     { name: "Generative AI", desc: "LLMs, prompt engineering, multimodal diffusion & generation", icon: "Sparkles", color: "from-pink-500 to-rose-600" },
     { name: "RAG Systems", desc: "Retrieval-Augmented Generation with vector embeddings", icon: "Database", color: "from-emerald-500 to-teal-600" },
-    { name: "AI Agents", desc: "Autonomous agentic workflows with LangGraph & tools", icon: "Activity", color: "from-amber-500 to-orange-600" },
+    { name: "AI Agents", desc: "Autonomous agentic workflows with LangGraph & tools", icon: "Workflow", color: "from-amber-500 to-orange-600" },
     { name: "Python", desc: "FastAPI, LangChain, NumPy, Pandas, scripting & APIs", icon: "Terminal", color: "from-blue-500 to-cyan-600" }
   ],
 
@@ -42,7 +42,7 @@ export const portfolioData = {
         { name: "RAG", level: 90, icon: "Database", description: "Retrieval-Augmented Generation, vector embeddings & document Q&A" },
         { name: "LangChain", level: 88, icon: "Layers", description: "Chains, memory, prompt templates & external LLM integrations" },
         { name: "LangGraph", level: 85, icon: "Activity", description: "Stateful multi-actor agent orchestration & cyclic workflows" },
-        { name: "AI Agents", level: 87, icon: "Bot", description: "Autonomous task-executing agents with reasoning & tool invocation" },
+        { name: "AI Agents", level: 87, icon: "Workflow", description: "Autonomous task-executing agents with reasoning & tool invocation" },
         { name: "Chatbot Development", level: 92, icon: "MessageSquare", description: "Interactive intelligent conversational assistants & context managers" }
       ]
     },
@@ -52,7 +52,7 @@ export const portfolioData = {
       items: [
         { name: "Python", level: 94, icon: "Terminal", description: "Modern OOP, async programming, data structures & backend APIs" },
         { name: "Artificial Intelligence", level: 90, icon: "Cpu", description: "Intelligent systems design, heuristic search & problem solving" },
-        { name: "Machine Learning", level: 86, icon: "Brain", description: "Classification, regression, clustering & model evaluation" },
+        { name: "Machine Learning", level: 86, icon: "TrendingUp", description: "Classification, regression, clustering & model evaluation" },
         { name: "Pandas", level: 88, icon: "FileSpreadsheet", description: "Data manipulation, transformation, cleansing & analysis" },
         { name: "NumPy", level: 86, icon: "Binary", description: "High-performance multidimensional arrays & numerical math" }
       ]

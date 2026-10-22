@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Github, Linkedin, Move3d, Bot, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Sparkles, Github, Linkedin, Move3d, GraduationCap, Mail, MapPin } from 'lucide-react';
 import { portfolioData } from '../../config/portfolioData';
 import { soundFX } from '../../utils/audio';
 
@@ -17,7 +17,7 @@ export default function HeroOverlay() {
           </div>
 
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass-panel border border-purple-500/30 text-[11px] font-mono text-purple-300">
-            <Bot className="w-3.5 h-3.5 text-purple-400" />
+            <GraduationCap className="w-3.5 h-3.5 text-purple-400" />
             <span>{personal.institute}</span>
           </div>
         </div>

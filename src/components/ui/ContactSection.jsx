@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Send, Copy, Check, Terminal, Sparkles, MessageSquare, MapPin, Bot } from 'lucide-react';
+import { Mail, Send, Copy, Check, Terminal, Sparkles, MessageSquare, MapPin } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../../config/portfolioData';
 import { soundFX } from '../../utils/audio';
@@ -49,7 +49,7 @@ export default function ContactSection() {
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-xs font-mono text-cyan-300 shadow-md">
-            <Bot className="w-3.5 h-3.5 text-cyan-400" />
+            <Terminal className="w-3.5 h-3.5 text-cyan-400" />
             <span>AI COLLABORATION PORTAL</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold font-display text-white">
