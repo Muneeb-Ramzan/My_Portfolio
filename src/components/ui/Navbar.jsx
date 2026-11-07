@@ -32,7 +32,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-panel bg-slate-950/80 border-b border-cyan-500/20 py-3 shadow-lg shadow-black/50'
+          ? 'glass-panel bg-slate-950/85 border-b border-cyan-500/20 py-3 shadow-lg shadow-black/50'
           : 'bg-transparent py-5'
       }`}
     >
@@ -51,9 +51,9 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-display font-bold text-base sm:text-lg tracking-wider text-white group-hover:text-cyan-300 transition-colors">
-              MUNEEB<span className="text-cyan-400">.AI</span>
+              SHOAIB<span className="text-cyan-400">.AI</span>
             </span>
-            <span className="text-[10px] font-mono text-slate-400 tracking-widest uppercase">AI Developer</span>
+            <span className="text-[10px] font-mono text-slate-400 tracking-widest uppercase">AI Developer Trainee</span>
           </div>
         </a>
 
@@ -101,28 +101,31 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden glass-panel border-b border-cyan-500/20 bg-slate-950/95 px-4 pt-3 pb-6 space-y-2 mt-2">
-          {navLinks.map((link) => {
-            const Icon = link.icon;
-            return (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={handleLinkClick}
-                className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-cyan-500/10 hover:text-cyan-300 transition-colors"
-              >
-                <Icon className="w-4 h-4 text-cyan-400" />
-                {link.name}
-              </a>
-            );
-          })}
-          <div className="pt-2">
+        <div className="md:hidden glass-panel bg-slate-950/95 border-b border-cyan-500/20 px-6 py-6 mt-2 space-y-4 animate-fadeIn">
+          <div className="flex flex-col space-y-2">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
+                >
+                  <Icon className="w-4 h-4 text-cyan-400" />
+                  <span>{link.name}</span>
+                </a>
+              );
+            })}
+          </div>
+
+          <div className="pt-4 border-t border-white/10">
             <a
               href="#contact"
               onClick={handleLinkClick}
-              className="w-full flex items-center justify-center py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 shadow-md"
+              className="w-full flex items-center justify-center py-3 rounded-xl font-bold font-mono text-xs bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950"
             >
-              Get in Touch
+              Get In Touch
             </a>
           </div>
         </div>

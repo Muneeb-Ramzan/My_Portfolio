@@ -6,6 +6,7 @@ import { soundFX } from '../../utils/audio';
 
 function ProjectCard({ project, onOpenModal }) {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });
 
   const handleMouseMove = (e) => {
     const card = e.currentTarget;
@@ -15,14 +16,20 @@ function ProjectCard({ project, onOpenModal }) {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -7;
-    const rotateY = ((x - centerX) / centerX) * 7;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
 
     setRotate({ x: rotateX, y: rotateY });
+    setGlare({
+      x: (x / rect.width) * 100,
+      y: (y / rect.height) * 100,
+      opacity: 0.2
+    });
   };
 
   const handleMouseLeave = () => {
     setRotate({ x: 0, y: 0 });
+    setGlare({ x: 50, y: 50, opacity: 0 });
   };
 
   return (
@@ -32,18 +39,26 @@ function ProjectCard({ project, onOpenModal }) {
       onMouseEnter={() => soundFX.playHover()}
       style={{
         transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)`,
-        transition: 'transform 0.15s ease-out',
+        transition: 'transform 0.15s ease-out, border-color 0.2s ease, box-shadow 0.2s ease',
       }}
-      className="group relative rounded-3xl overflow-hidden glass-panel border border-white/10 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/10 flex flex-col justify-between"
+      className="group relative rounded-3xl overflow-hidden glass-panel border border-white/10 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/15 flex flex-col justify-between"
     >
-      <div>
+      {/* Glare effect overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(0, 243, 255, ${glare.opacity}), transparent 60%)`,
+        }}
+      />
+
+      <div className="relative z-10">
         {/* Project Thumbnail Image */}
         <div 
           onClick={() => {
             soundFX.playClick();
             onOpenModal(project);
           }}
-          className="relative h-52 sm:h-60 w-full overflow-hidden bg-slate-950 cursor-pointer"
+          className="relative h-52 sm:h-56 w-full overflow-hidden bg-slate-950 cursor-pointer"
         >
           <img
             src={project.image}
@@ -67,7 +82,7 @@ function ProjectCard({ project, onOpenModal }) {
           {/* Metrics overlay badge */}
           {project.metrics && (
             <div className="absolute bottom-3 left-4 right-4">
-              <div className="text-[10px] font-mono text-cyan-300/90 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-cyan-500/20 truncate">
+              <div className="text-[10px] font-mono text-cyan-300/90 bg-slate-950/85 backdrop-blur-md px-2.5 py-1 rounded-lg border border-cyan-500/20 truncate">
                 ⚡ {project.metrics}
               </div>
             </div>
@@ -106,9 +121,9 @@ function ProjectCard({ project, onOpenModal }) {
         </div>
       </div>
 
-      {/* Card Action Buttons: GitHub, Live Demo & Architecture */}
-      <div className="p-6 pt-0 space-y-3">
-        <div className="grid grid-cols-2 gap-2.5 pt-3 border-t border-white/10">
+      {/* Card Action Buttons: GitHub & Inspect Pipeline */}
+      <div className="p-6 pt-0 space-y-3 relative z-10">
+        <div className="pt-3 border-t border-white/10">
           <a
             href={project.githubUrl}
             target="_blank"
@@ -117,13 +132,11 @@ function ProjectCard({ project, onOpenModal }) {
               e.stopPropagation();
               soundFX.playClick();
             }}
-            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-medium glass-panel border border-white/15 hover:border-cyan-400 text-slate-200 hover:text-white transition-all group/btn"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-medium glass-panel border border-cyan-500/30 hover:border-cyan-400 bg-cyan-500/10 text-cyan-300 hover:text-white hover:bg-cyan-500/20 transition-all group/btn shadow-md"
           >
-            <Github className="w-3.5 h-3.5 text-cyan-400" />
-            <span>GitHub</span>
+            <Github className="w-4 h-4 text-cyan-400 group-hover/btn:scale-110 transition-transform" />
+            <span>View on GitHub</span>
           </a>
-
-        
         </div>
 
         <button
@@ -131,10 +144,10 @@ function ProjectCard({ project, onOpenModal }) {
             soundFX.playClick();
             onOpenModal(project);
           }}
-          className="w-full py-1.5 text-center text-[11px] font-mono text-cyan-400/80 hover:text-cyan-300 hover:underline flex items-center justify-center gap-1 transition-colors"
+          className="w-full py-1.5 text-center text-[11px] font-mono text-slate-400 hover:text-cyan-300 hover:underline flex items-center justify-center gap-1 transition-colors"
         >
           <span>Inspect Architecture & Pipeline</span>
-          <ArrowUpRight className="w-3 h-3" />
+          <ArrowUpRight className="w-3.5 h-3.5" />
         </button>
       </div>
     </div>
@@ -146,7 +159,7 @@ export default function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeModalProject, setActiveModalProject] = useState(null);
 
-  const categories = ['All', 'Machine Learning', 'Generative AI', 'RAG', 'Data Science', 'Python Foundations'];
+  const categories = ['All', 'Generative AI', 'RAG & LLMs', 'AI Agents', 'Machine Learning'];
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
@@ -162,13 +175,13 @@ export default function ProjectsSection() {
         <div className="flex flex-col items-center text-center space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-xs font-mono text-cyan-300 shadow-md">
             <FolderGit2 className="w-3.5 h-3.5 text-cyan-400" />
-            <span>REAL-WORLD AI CREATIONS</span>
+            <span>FLAGSHIP AI CREATIONS</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold font-display text-white">
             Featured AI Projects
           </h2>
           <p className="max-w-2xl text-slate-400 text-sm sm:text-base">
-            Intelligent applications spanning Generative AI, Agentic RAG systems, Multi-Agent swarms, and Python automation.
+            Real-world AI systems built with Python, LangChain, LangGraph, RAG, and Machine Learning.
           </p>
 
           {/* Category Filter Tabs */}
@@ -187,7 +200,7 @@ export default function ProjectsSection() {
                     : 'glass-panel text-slate-300 hover:text-white hover:border-white/20'
                 }`}
               >
-                {cat === 'All' ? 'All 5 Projects' : cat}
+                {cat === 'All' ? 'All 6 Projects' : cat}
               </button>
             ))}
           </div>

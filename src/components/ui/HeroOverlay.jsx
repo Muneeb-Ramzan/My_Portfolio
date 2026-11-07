@@ -6,9 +6,9 @@ export default function HeroOverlay() {
   const { personal, stats } = portfolioData;
 
   return (
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 min-h-[92vh] flex flex-col justify-between pointer-events-none">
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-14 min-h-[92vh] flex flex-col justify-between pointer-events-none">
       {/* Top Tag & Main Hero Introduction */}
-      <div className="space-y-5 max-w-3xl pointer-events-auto">
+      <div className="space-y-5 max-w-2xl lg:max-w-3xl pointer-events-auto">
         {/* Status and Institute Badge */}
         <div className="flex flex-wrap items-center gap-2">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/30 text-xs font-mono text-cyan-300 shadow-lg shadow-cyan-500/10">
@@ -22,15 +22,15 @@ export default function HeroOverlay() {
           </div>
         </div>
 
-        {/* Hero Title and Role */}
+        {/* Hero Title and Name */}
         <div>
           <h2 className="text-xl sm:text-2xl font-mono font-medium text-cyan-400 tracking-wide mb-1">
             Hi, I'm
           </h2>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-tight">
-            Muhammad <br className="hidden sm:inline" />
+            Shoaib <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 bg-clip-text text-transparent text-glow-cyan">
-              Muneeb Ramzan
+              Raoof
             </span>
           </h1>
         </div>
@@ -41,12 +41,12 @@ export default function HeroOverlay() {
         </div>
 
         {/* Short introduction paragraph */}
-        <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
+        <p className="text-base sm:text-lg text-slate-300 max-w-xl font-light leading-relaxed">
           {personal.heroIntro}
         </p>
 
         {/* Action Buttons: 'View My Projects' and 'Contact Me' */}
-        <div className="flex flex-wrap items-center gap-4 pt-3">
+        <div className="flex flex-wrap items-center gap-4 pt-2">
           <a
             href="#projects"
             onClick={() => soundFX.playClick()}
@@ -90,17 +90,17 @@ export default function HeroOverlay() {
           >
             <Linkedin className="w-4 h-4" />
           </a>
-          <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400 px-2 py-1 rounded-lg glass-panel">
+          <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400 px-3 py-1.5 rounded-xl glass-panel border border-white/10">
             <MapPin className="w-3.5 h-3.5 text-pink-400" />
             <span>{personal.location}</span>
           </div>
         </div>
       </div>
 
-      {/* Center 3D Drag / Orbit Hint */}
-      <div className="self-center hidden sm:flex items-center gap-2.5 px-5 py-2 rounded-full glass-panel border border-cyan-500/30 text-xs font-mono text-cyan-300 animate-pulse-glow my-4 shadow-lg shadow-cyan-500/10">
-        <Move3d className="w-4 h-4 text-cyan-400" />
-        <span>Move cursor & drag to interact with 3D Particles</span>
+      {/* 3D Drag / Orbit Hint */}
+      <div className="self-center hidden sm:flex items-center gap-2.5 px-5 py-2 rounded-full glass-panel border border-cyan-500/30 text-xs font-mono text-cyan-300 animate-pulse-glow my-3 shadow-lg shadow-cyan-500/10 pointer-events-auto">
+        <Move3d className="w-4 h-4 text-cyan-400 animate-spin-slow" />
+        <span>Interactive 3D Neural Brain • Drag & Hover to Interact</span>
       </div>
 
       {/* Bottom Key Metric Counters */}

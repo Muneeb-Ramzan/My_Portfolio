@@ -1,52 +1,52 @@
-# Muhammad Muneeb Ramzan — 3D AI Developer Portfolio
+# Shoaib Raoof — 3D AI Developer Portfolio
 
-An immersive, modern, professional 3D personal portfolio website for **Muhammad Muneeb Ramzan**, AI Software Developer Trainee & AI Student at **Adan Institute of Technology, Islamabad**.
+An immersive, modern, professional, futuristic 3D personal portfolio website for **Shoaib Raoof**, AI Software Developer Trainee & AI Student at **Adan Institute of Technology, Islamabad**.
 
 Built with **React 18**, **Three.js**, **React Three Fiber (R3F)**, **Drei**, **Tailwind CSS**, and **Framer Motion**.
 
 ---
 
-## Features & Architecture
+## Features & Highlights
 
-- **Interactive 3D Neural AI Core & Particles Hero**:
-  - Real-time 3D glowing AI Neural Brain with 18 pulsating synaptic nodes and distorted holographic plasma core.
-  - Multi-axis rotating cybernetic orbital energy rings.
-  - Interactive mouse-reactive particle grid wave and twinkling cosmic space dust.
-  - Smooth orbit controls with touch & pointer damping.
+- **Interactive 3D Neural AI Brain & Particles Hero**:
+  - Real-time 3D glowing AI Neural Brain with pulsating synaptic nodes, multi-axis cybernetic orbital energy rings, and distorted holographic plasma core (`MeshDistortMaterial`).
+  - Interactive mouse-reactive pointer tilt, acceleration, energy pulse on hover/click, and Web Audio synthesis.
+  - Cosmic space dust and floating particle wave field.
+  - Smooth touch & pointer damping with OrbitControls.
 
-- **Interactive 3D Fibonacci Skills Sphere & Categories**:
-  - Fibonacci-distributed 3D orbital constellation featuring all 15 skills:
-    *Python, Generative AI, RAG, LangChain, LangGraph, AI Agents, Chatbot Development, Machine Learning, Artificial Intelligence, Pandas, NumPy, HTML, CSS, Digital Marketing, SEO*.
-  - Hover over rotating 3D skill nodes to inspect domain details with Web Audio synthesizer feedback.
-  - Synchronized domain category filter tabs and proficiency progress bars.
+- **Interactive 3D Skills Sphere & Perspective Tilt Cards**:
+  - Fibonacci-distributed 3D orbital constellation featuring all core skills:
+    *Python, Artificial Intelligence, Machine Learning, Deep Learning, Generative AI, RAG, LangChain, LangGraph, AI Agents, Chatbot Development, Pandas, NumPy, HTML, CSS*.
+  - Individual 3D perspective mouse tilt cards with dynamic glare reflection, mastery indicators, and technical descriptions.
+  - Switchable view modes: 3D Fibonacci Sphere + Cards Split View or Full 3D Cards Grid View.
 
-- **3D Parallax Tilt AI Project Cards**:
+- **3D Parallax Tilt AI Project Cards (6 Flagship AI Creations)**:
   - Real-time mouse perspective calculation for 3D card parallax tilt.
-  - Covers 5 flagship AI creations:
-    1. **AI Recruiter** (Resume analysis & candidate screening)
-    2. **Agentic RAG Chatbot** (Document intelligence & Q/A assistant)
-    3. **AITECH Agentic RAG Chatbot** (Adan Institute of Technology assistant)
-    4. **Script to Video Generator** (Generative AI multimodal video pipeline)
-    5. **AI Travel Planner** (Multi-agent swarm for travel & itinerary architecture)
-  - Direct GitHub repository and Live Demo buttons on every card.
-  - Deep-dive architecture modal previews with end-to-end system pipelines and performance metrics.
+  - Covers all 6 flagship AI creations:
+    1. **AI Recruiter** — AI-powered recruitment system that analyzes resumes and assists candidate screening.
+    2. **Agentic RAG Chatbot** — Retrieval-Augmented Generation chatbot designed to answer questions using provided documents.
+    3. **AITECH Agentic RAG Chatbot** — AI chatbot providing information on courses, admissions, fees, and institute advisory for Adan Institute of Technology.
+    4. **Script to Video Generator** — Generative AI multimodal system transforming scripts into complete video reels.
+    5. **AI Travel Planner** — Multi-agent swarm concept orchestrating personalized travel itineraries with LangGraph.
+    6. **PROTAC-Predictor** — Machine Learning-based protein degradation prediction model for targeted therapeutics.
+  - Direct GitHub button on every card and detailed "Inspect Architecture & Pipeline" modal with end-to-end dataflow diagrams and performance metrics.
 
-- **Interactive 'Ask Muneeb AI Assistant' Widget**:
-  - Expandable neural chatbot agent allowing visitors to query Muneeb's skills, projects, and Adan Institute background.
-  - Quick-prompt suggestion chips for instantaneous answers.
+- **Interactive 'Ask Shoaib AI Assistant' Widget**:
+  - Expandable neural chatbot agent allowing visitors to query Shoaib's 6 projects, technical skills, background at Adan Institute of Technology, and contact methods.
+  - Instant quick-prompt suggestion chips and typing animation.
 
 - **Futuristic Experience & Learning Timeline**:
-  - 2026 AI Software Developer Trainee (Adan Institute of Technology).
-  - 2026 Artificial Intelligence Studies (ML, GenAI, RAG, LangChain, AI Agents, Python).
-  - Digital Marketing & SEO certification.
-  - Education (Intermediate Education) & Current Focus cards.
+  - 2026 — AI Software Developer Trainee (Adan Institute of Technology).
+  - 2026 — Artificial Intelligence Studies (Learning Machine Learning, Generative AI, RAG, LangChain, AI Agents, and Python).
+  - Education: BSCS & Intermediate Education.
+  - Current Focus: Artificial Intelligence, Machine Learning, Generative AI, RAG, AI Agents, Python.
 
-- **'Let's Build Something Intelligent' Contact Portal**:
-  - Interactive contact form with cosmic confetti blast celebration and instant feedback.
-  - One-click primary email copy to clipboard.
+- **'Let's Build Something Intelligent' Collaboration Portal**:
+  - Modern glassmorphism contact form with cosmic confetti blast celebration upon submission.
+  - One-click email copy button with status indicator.
 
 - **Web Audio API Sound FX**:
-  - Procedural sound effects for hover, clicks, and chimes with a sound toggle.
+  - Procedural sound effects for hover, clicks, chimes, and celebrations with an interactive audio toggle.
 
 ---
 
@@ -54,7 +54,7 @@ Built with **React 18**, **Three.js**, **React Three Fiber (R3F)**, **Drei**, **
 
 - **Framework**: React 18, Vite
 - **3D Graphics & Shaders**: Three.js, `@react-three/fiber`, `@react-three/drei`
-- **Styling & UI**: Tailwind CSS, Glassmorphism, Lucide Icons
+- **Styling & UI**: Tailwind CSS, Glassmorphism, Lucide React Icons
 - **Effects & Feedback**: Canvas Confetti, Web Audio API
 
 ---
@@ -75,4 +75,4 @@ npm run dev
 ```bash
 npm run build
 ```
-Optimized assets will be output to `dist/` ready for zero-config deployment on Vercel, Netlify, or GitHub Pages.
+Optimized assets will be generated in `dist/` ready for zero-config deployment.

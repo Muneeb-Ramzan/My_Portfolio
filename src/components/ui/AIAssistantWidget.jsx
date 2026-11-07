@@ -8,7 +8,7 @@ export default function AIAssistantWidget() {
   const [messages, setMessages] = useState([
     {
       sender: 'ai',
-      text: "⚡ Neural Terminal Active. Hi! I'm Muneeb's AI Assistant. Ask me anything about Muhammad Muneeb Ramzan's AI projects, LangChain / RAG skills, education at Adan Institute of Technology, or how to collaborate!"
+      text: "⚡ Neural Terminal Active. Hi! I'm Shoaib's AI Assistant. Ask me anything about Shoaib Raoof's 6 AI projects, LangChain / RAG skills, education at Adan Institute of Technology, or how to collaborate!"
     }
   ]);
   const [input, setInput] = useState('');
@@ -16,10 +16,10 @@ export default function AIAssistantWidget() {
   const messagesEndRef = useRef(null);
 
   const quickPrompts = [
-    "Tell me about Muneeb's AI projects",
-    "What is his experience with RAG & LangChain?",
+    "Tell me about Shoaib's 6 AI projects",
+    "What are his Generative AI & RAG skills?",
     "Tell me about Adan Institute of Technology",
-    "How can I contact Muneeb?"
+    "How can I contact Shoaib Raoof?"
   ];
 
   useEffect(() => {
@@ -31,39 +31,37 @@ export default function AIAssistantWidget() {
   const generateAIResponse = (userQuery) => {
     const q = userQuery.toLowerCase();
     
-    if (q.includes('project') || q.includes('recruiter') || q.includes('rag') || q.includes('langchain') || q.includes('churn') || q.includes('heart') || q.includes('work')) {
-      return `Muhammad Muneeb Ramzan has built 7+ open-source Python, AI & ML projects on GitHub:
-1. 🩺 Machine Learning Projects — Heart Disease & Customer Churn Prediction using Scikit-learn, EDA & classification models.
-2. 🤖 AI Recruiter — Intelligent resume parsing and semantic candidate screening system.
-3. 📄 RAG Project — Retrieval-Augmented Generation system with vector embeddings & LLM question-answering.
-4. ⛓️ LangChain Projects — Sequential LLM chains, prompt engineering, memory buffers & agentic integrations.
-5. 📊 Exploratory Data Analysis (EDA) — Statistical data science pipelines with NumPy, Pandas & Matplotlib.
-6. 🏛️ Python OOP Architecture — Object-Oriented design patterns, inheritance, and clean code principles.
-7. 🐍 Python Algorithms & Logic — Computational problem-solving and algorithmic foundations for AI.`;
+    if (q.includes('project') || q.includes('recruiter') || q.includes('rag') || q.includes('travel') || q.includes('video') || q.includes('protac') || q.includes('work')) {
+      return `Shoaib Raoof has built 6 featured real-world AI creations:
+1. 🤖 AI Recruiter — AI-powered recruitment system for resume parsing and candidate screening.
+2. 📄 Agentic RAG Chatbot — Retrieval-Augmented Generation chatbot designed to answer questions using provided documents.
+3. 🏫 AITECH Agentic RAG Chatbot — AI chatbot for Adan Institute of Technology providing courses, admissions, and fee information.
+4. 🎬 Script to Video Generator — Generative AI pipeline transforming text scripts into full video reels.
+5. ✈️ AI Travel Planner — Multi-agent concept using intelligent LangGraph agents for itinerary planning.
+6. 🧬 PROTAC-Predictor — ML-Based protein degradation prediction for targeted therapeutics.`;
     }
 
     if (q.includes('skill') || q.includes('tech') || q.includes('stack') || q.includes('python')) {
-      return `Muneeb's core AI stack includes:
-• Frameworks: LangChain, RAG (Retrieval-Augmented Generation), Scikit-Learn
-• Machine Learning: Classification, EDA, Predictive Modeling, Performance Evaluation
-• Programming & Data: Python (OOP, Algorithms), Pandas, NumPy, Matplotlib
-• Web & Growth: HTML, CSS, Digital Marketing, and SEO strategies.`;
+      return `Shoaib Raoof's core technical stack includes:
+• Generative AI & Agents: Generative AI, RAG, LangChain, LangGraph, AI Agents, Chatbot Development
+• Core AI & Machine Learning: Python, Artificial Intelligence, Machine Learning, Deep Learning, Pandas, NumPy
+• Web & Interface: HTML and CSS for modern responsive frontends.`;
     }
 
-    if (q.includes('adan') || q.includes('education') || q.includes('trainee') || q.includes('institute') || q.includes('studies')) {
-      return `Muneeb is an AI Software Developer who has completed his comprehensive Artificial Intelligence training at Adan Institute of Technology, Islamabad (2026). He also completed specialized training in Digital Marketing and SEO, alongside his Intermediate Education background. He believes in learning by building real-world intelligent systems!`;
+    if (q.includes('adan') || q.includes('education') || q.includes('trainee') || q.includes('institute') || q.includes('studies') || q.includes('bscs')) {
+      return `Shoaib Raoof is an AI Software Developer Trainee and AI student at Adan Institute of Technology, Islamabad (2026). His studies focus on Machine Learning, Generative AI, RAG, LangChain, AI Agents, and Python. His academic background also includes BSCS and Intermediate Education. He believes in learning by building projects!`;
     }
 
     if (q.includes('contact') || q.includes('hire') || q.includes('email') || q.includes('reach') || q.includes('location')) {
-      return `You can connect with Muneeb directly:
-• Email: muneebramzan246@gmail.com
+      return `You can connect with Shoaib Raoof directly:
+• Email: shoaibrauf415@gmail.com
 • Location: Islamabad, Pakistan
-• GitHub: github.com/Muneeb-Ramzan
-• LinkedIn: linkedin.com/in/muhammad-muneeb-ramzan
-You can also scroll to the 'Let's Build Something Intelligent' transmission portal below!`;
+• GitHub: github.com/shoaib-raoof
+• LinkedIn: linkedin.com/in/shoaib-raoof
+You can also use the 'Let's Build Something Intelligent' form below on this page!`;
     }
 
-    return `Muhammad Muneeb Ramzan is an AI Software Developer who has completed his AI training and specializes in building intelligent AI applications, chatbots, automation systems, and modern web experiences. He specializes in Python, Generative AI, RAG, LangChain, and LangGraph. Would you like to know more about his projects or tech stack?`;
+    return `Shoaib Raoof is an AI student and AI Software Developer Trainee at Adan Institute of Technology, Islamabad. He is passionate about Artificial Intelligence and builds intelligent applications, chatbots, automation systems, and modern web experiences. Would you like to know more about his 6 AI projects or his technical skills?`;
   };
 
   const handleSend = (textToSend = input) => {
@@ -81,7 +79,7 @@ You can also scroll to the 'Let's Build Something Intelligent' transmission port
       setMessages([...newMessages, { sender: 'ai', text: reply }]);
       setIsTyping(false);
       soundFX.playHover();
-    }, 750);
+    }, 700);
   };
 
   return (
@@ -99,28 +97,31 @@ You can also scroll to the 'Let's Build Something Intelligent' transmission port
           >
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
             <Bot className="w-5 h-5 text-slate-950" />
-            <span className="hidden sm:inline">Ask Muneeb's AI</span>
+            <span>ASK SHOAIB'S AI</span>
           </button>
         )}
       </div>
 
       {/* Floating Chat Modal */}
       {isOpen && (
-        <div className="fixed bottom-6 right-4 sm:right-6 z-50 w-[92vw] sm:w-[420px] h-[520px] max-h-[85vh] glass-panel bg-slate-950/95 border border-cyan-500/40 rounded-3xl shadow-2xl shadow-cyan-500/20 flex flex-col overflow-hidden animate-fadeIn">
+        <div className="fixed bottom-6 right-6 z-50 w-[90vw] sm:w-[420px] h-[550px] max-h-[85vh] rounded-3xl glass-panel bg-slate-950/95 border border-cyan-500/40 shadow-2xl shadow-cyan-500/20 flex flex-col overflow-hidden animate-fadeIn">
           {/* Header */}
-          <div className="p-4 border-b border-cyan-500/20 bg-slate-900/80 flex items-center justify-between">
+          <div className="p-4 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500 to-purple-600 p-0.5">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-400 to-purple-600 p-0.5">
                 <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
                   <Bot className="w-4 h-4 text-cyan-400" />
                 </div>
               </div>
               <div>
-                <div className="text-xs font-bold font-mono text-white flex items-center gap-1.5">
-                  <span>Muneeb AI Assistant</span>
+                <h3 className="text-sm font-bold font-display text-white flex items-center gap-1.5">
+                  Shoaib AI Assistant
+                  <Sparkles className="w-3 h-3 text-cyan-400" />
+                </h3>
+                <div className="text-[10px] font-mono text-emerald-400 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                  <span>ONLINE • NEURAL AGENT</span>
                 </div>
-                <div className="text-[10px] font-mono text-slate-400">Agentic Intelligence Engine</div>
               </div>
             </div>
 
@@ -129,30 +130,30 @@ You can also scroll to the 'Let's Build Something Intelligent' transmission port
                 soundFX.playClick();
                 setIsOpen(false);
               }}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-pink-400 hover:bg-white/5 transition-colors"
+              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
-          {/* Chat Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3.5 text-xs font-mono">
-            {messages.map((msg, i) => (
+          {/* Messages Feed */}
+          <div className="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs">
+            {messages.map((msg, idx) => (
               <div
-                key={i}
+                key={idx}
                 className={`flex gap-2.5 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {msg.sender === 'ai' && (
-                  <div className="w-6 h-6 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center shrink-0 mt-0.5">
-                    <Terminal className="w-3 h-3 text-cyan-400" />
+                  <div className="w-6 h-6 rounded-lg bg-cyan-500/20 flex items-center justify-center shrink-0 border border-cyan-500/30">
+                    <Bot className="w-3.5 h-3.5 text-cyan-400" />
                   </div>
                 )}
 
                 <div
-                  className={`p-3.5 rounded-2xl max-w-[82%] whitespace-pre-line leading-relaxed ${
+                  className={`p-3 rounded-2xl max-w-[82%] leading-relaxed ${
                     msg.sender === 'user'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-medium rounded-tr-none'
-                      : 'bg-white/5 border border-white/10 text-slate-200 rounded-tl-none'
+                      : 'bg-white/5 border border-white/10 text-slate-200 rounded-tl-none font-sans whitespace-pre-line'
                   }`}
                 >
                   {msg.text}
@@ -161,25 +162,29 @@ You can also scroll to the 'Let's Build Something Intelligent' transmission port
             ))}
 
             {isTyping && (
-              <div className="flex items-center gap-2 text-cyan-400 text-xs font-mono">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce" />
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.2s]" />
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.4s]" />
-                <span className="text-[11px] text-slate-400">Synthesizing neural reply...</span>
+              <div className="flex gap-2.5 items-center">
+                <div className="w-6 h-6 rounded-lg bg-cyan-500/20 flex items-center justify-center shrink-0">
+                  <Bot className="w-3.5 h-3.5 text-cyan-400" />
+                </div>
+                <div className="p-3 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <span className="w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <span className="w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
               </div>
             )}
             <div ref={messagesEndRef} />
           </div>
 
           {/* Quick Prompt Chips */}
-          <div className="px-3 py-2 border-t border-white/5 bg-slate-900/40 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-            {quickPrompts.map((p, idx) => (
+          <div className="p-2.5 border-t border-white/5 bg-slate-950/70 overflow-x-auto flex gap-1.5">
+            {quickPrompts.map((prompt, i) => (
               <button
-                key={idx}
-                onClick={() => handleSend(p)}
-                className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-mono bg-white/5 border border-white/10 text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition-colors"
+                key={i}
+                onClick={() => handleSend(prompt)}
+                className="shrink-0 text-[10px] font-mono px-2.5 py-1 rounded-full glass-panel border border-white/10 hover:border-cyan-400/50 text-slate-300 hover:text-white transition-all truncate max-w-[200px]"
               >
-                {p}
+                {prompt}
               </button>
             ))}
           </div>
@@ -190,19 +195,19 @@ You can also scroll to the 'Let's Build Something Intelligent' transmission port
               e.preventDefault();
               handleSend();
             }}
-            className="p-3 border-t border-white/10 bg-slate-950 flex items-center gap-2"
+            className="p-3 bg-slate-950 border-t border-white/10 flex items-center gap-2"
           >
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about Muneeb's AI projects..."
-              className="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 focus:border-cyan-400 focus:outline-none text-white text-xs font-mono placeholder-slate-500"
+              placeholder="Ask about projects, skills, education..."
+              className="flex-1 px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
             />
             <button
               type="submit"
               disabled={!input.trim()}
-              className="p-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold hover:brightness-110 disabled:opacity-40 transition-all"
+              className="p-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 disabled:opacity-30 transition-all"
             >
               <Send className="w-3.5 h-3.5" />
             </button>

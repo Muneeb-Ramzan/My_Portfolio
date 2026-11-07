@@ -6,8 +6,8 @@ import SkillsSection from './components/ui/SkillsSection';
 import ProjectsSection from './components/ui/ProjectsSection';
 import ExperienceSection from './components/ui/ExperienceSection';
 import ContactSection from './components/ui/ContactSection';
+import AIAssistantWidget from './components/ui/AIAssistantWidget';
 import Footer from './components/ui/Footer';
-
 import ErrorBoundary from './components/ui/ErrorBoundary';
 
 export default function App() {
@@ -31,21 +31,24 @@ export default function App() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyber-darker to-transparent pointer-events-none" />
         </section>
 
-        {/* Specifications & About */}
+        {/* About Me Section */}
         <AboutSection />
 
-        {/* 3D Interactive Skills Constellation */}
+        {/* 3D Interactive Skills Constellation & 3D Tilt Cards */}
         <SkillsSection />
 
-        {/* 3D Projects Showcase */}
+        {/* 3D Projects Showcase (6 Real-World AI Creations) */}
         <ProjectsSection />
 
-        {/* Engineering Experience Timeline */}
+        {/* Engineering Experience Timeline, Education & Current Focus */}
         <ExperienceSection />
 
-        {/* Interactive Hologram Contact Portal */}
+        {/* Interactive Collaboration Contact Portal */}
         <ContactSection />
       </main>
+
+      {/* Floating Ask Shoaib AI Assistant */}
+      <AIAssistantWidget />
 
       {/* Footer */}
       <Footer />

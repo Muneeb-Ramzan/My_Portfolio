@@ -1,4 +1,4 @@
-import { ArrowUp, Terminal, Sparkles } from 'lucide-react';
+import { ArrowUp, Terminal, Sparkles, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '../../config/portfolioData';
 import { soundFX } from '../../utils/audio';
 
@@ -22,13 +22,13 @@ export default function Footer() {
                   <Terminal className="w-4 h-4 text-cyan-400" />
                 </div>
               </div>
-              <span className="font-display font-bold text-lg text-white">
-                Muhammad Muneeb Ramzan
+              <span className="font-display font-bold text-xl text-white">
+                Shoaib Raoof
               </span>
             </div>
 
-            <div className="text-xs font-mono text-cyan-300">
-              {personal.roleTagline}
+            <div className="text-xs font-mono text-cyan-300 font-medium">
+              AI Software Developer Trainee | AI Student
             </div>
 
             <div className="text-xs font-mono text-purple-400 flex items-center gap-1.5 pt-1">
@@ -88,7 +88,10 @@ export default function Footer() {
 
         {/* Bottom copyright line */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
-          
+          <div>
+            © {new Date().getFullYear()} Shoaib Raoof. All rights reserved.
+          </div>
+
           <div className="flex items-center gap-4">
             <a
               href={personal.socials.github}

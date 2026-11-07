@@ -12,13 +12,13 @@ export default function ExperienceSection() {
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-pink-500/30 text-xs font-mono text-pink-300 shadow-md">
             <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-            <span>ACADEMIC & INDUSTRY PATHWAY</span>
+            <span>ACADEMIC & INDUSTRY TRAJECTORY</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold font-display text-white">
             Experience & Learning Timeline
           </h2>
           <p className="max-w-xl text-slate-400 text-sm sm:text-base">
-            Hands-on AI development traineeship, structured machine learning studies, and digital growth training.
+            Hands-on AI development traineeship, structured machine learning studies, and foundational computer science education.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function ExperienceSection() {
             <div className="glass-panel p-6 sm:p-7 rounded-3xl border border-white/10 space-y-5 shadow-xl">
               <h3 className="text-xl font-bold font-display text-white flex items-center gap-2.5">
                 <GraduationCap className="w-5 h-5 text-purple-400" />
-                <span>Education Background</span>
+                <span>Education</span>
               </h3>
 
               <div className="space-y-4">
@@ -95,9 +95,9 @@ export default function ExperienceSection() {
                   >
                     <div className="flex items-center justify-between text-xs font-mono text-purple-300 mb-1">
                       <span>{edu.institution}</span>
-                      <span>{edu.year}</span>
+                      <span className="text-slate-400">{edu.year}</span>
                     </div>
-                    <div className="text-sm font-bold text-white mb-1">
+                    <div className="text-base font-bold text-white mb-1">
                       {edu.degree}
                     </div>
                     <p className="text-xs text-slate-400 leading-snug">
@@ -113,7 +113,7 @@ export default function ExperienceSection() {
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-bold font-display text-white flex items-center gap-2.5">
                   <Bot className="w-5 h-5 text-cyan-400" />
-                  <span>Current AI Focus</span>
+                  <span>Current Focus</span>
                 </h3>
                 <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/30 animate-pulse">
                   ACTIVE 2026
@@ -121,7 +121,7 @@ export default function ExperienceSection() {
               </div>
 
               <p className="text-xs text-slate-300">
-                Key disciplines and engineering paradigms under active daily development:
+                Key disciplines under continuous active development:
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -129,7 +129,7 @@ export default function ExperienceSection() {
                   "Artificial Intelligence",
                   "Machine Learning",
                   "Generative AI",
-                  "RAG Systems",
+                  "RAG",
                   "AI Agents",
                   "Python"
                 ].map((item, idx) => (
